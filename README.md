@@ -44,3 +44,18 @@ Testes unitários
 ```bash
 npm run test:unit
 ```
+
+# Executando aplicação em um docker container
+
+Primeiro é preciso fazer o build da imagem
+
+```bash
+docker build -t extensor-numerico .
+```
+
+Em seguida, basta executar com o comando abaixo
+
+```bash
+docker run -p 3000:3000 extensor-numerico
+```
+
