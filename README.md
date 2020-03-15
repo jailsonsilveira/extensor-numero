@@ -2,7 +2,7 @@
 
 Esse projeto consiste em uma API utilizando expressjs + typescript.
 
-## Instação
+## Instalação
 
 Na pasta do projeto, faça a instalção utilizando o gerenciador de pacotes NPM
 
@@ -14,7 +14,6 @@ Para iniciar o projeto em modo de desenvolvimento, utilize o comando:
 ```bash
 npm run watch
 ```
-
 
 ## Funcionamento da API:
 
@@ -29,3 +28,34 @@ GET /-10
 // retornará o resultado
 //  { "extenso": "menos dez" }
 ```
+
+É possível efetuar as requisições acessando a documentação que foi criada com o swagger. A mesma encontra-se disponível em /api-docs
+
+# Testes da API
+
+Testes de integração
+
+```bash
+npm test
+```
+
+Testes unitários
+
+```bash
+npm run test:unit
+```
+
+# Executando aplicação em um docker container
+
+Primeiro é preciso fazer o build da imagem
+
+```bash
+docker build -t extensor-numerico .
+```
+
+Em seguida, basta executar com o comando abaixo
+
+```bash
+docker run -p 3000:3000 extensor-numerico
+```
+

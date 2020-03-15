@@ -1,3 +1,5 @@
+import logger from "../logging/logger";
+
 const data = require('../../resources/numbers.json');
 class NumeroExtensoService {
 
@@ -5,6 +7,7 @@ class NumeroExtensoService {
 
     public generateNumeroExtenso(number: number) {
 
+        logger.debug(`Numero informado: ${number}`);
         let extenso = "";
         
         if (number < 0) {
@@ -13,6 +16,7 @@ class NumeroExtensoService {
         }
 
         extenso += this.tratarNumero(number, 1000);
+        logger.debug(`Retorno: ${extenso}`);
         return extenso;
     }
 
