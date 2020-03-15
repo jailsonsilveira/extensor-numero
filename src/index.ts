@@ -16,6 +16,7 @@ const server = app.listen(app.get("port"), () => {
 });
 
 
+
 server.on('error', onError);
 
 /**
@@ -49,4 +50,4 @@ function onError(error: any) {
   }
 }
 
-export default server;
+module.exports = server;
