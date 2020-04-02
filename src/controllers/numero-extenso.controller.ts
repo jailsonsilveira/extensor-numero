@@ -14,7 +14,7 @@ class NumeroExtensoController {
             return res.status(422).send({ message: "Parâmetro informado não é um número" });
         }
 
-        if (numero > 9999 || numero < -9999) {
+        if (numero > 99999 || numero < -99999) {
             logger.warn(`Número fora do permitido ${numero}`);
             return res.status(422).send({ message: "número fora da faixa de valores permitidos" });
         }

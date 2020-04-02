@@ -1,7 +1,7 @@
 import supertest from 'supertest';
 
-let maxNumberExtenso = { extenso: "nove mil e novecentos e noventa e nove" };
-let minNumberExtenso = { extenso: "menos nove mil e novecentos e noventa e nove" };
+let maxNumberExtenso = { extenso: "noventa e nove mil e novecentos e noventa e nove" };
+let minNumberExtenso = { extenso: "menos noventa e nove mil e novecentos e noventa e nove" };
 
 
 describe('loading express', function () {
@@ -12,9 +12,9 @@ describe('loading express', function () {
     afterEach(function () {
         server.close();
     });
-    it('respond with 9999 extenso', function testMaxNumber(done) {
+    it('respond with 99999 extenso', function testMaxNumber(done) {
         supertest(server)
-            .get(`/9999`)
+            .get(`/99999`)
             .expect(200)
             .expect(maxNumberExtenso)
             .end((err) => {
@@ -23,9 +23,9 @@ describe('loading express', function () {
             })
     });
 
-    it('respond with -9999 extenso', function testMinNumber(done) {
+    it('respond with -99999 extenso', function testMinNumber(done) {
         supertest(server)
-            .get('/-9999')
+            .get('/-99999')
             .expect(minNumberExtenso)
             .end((err) => {
                 if (err) return done(err);
@@ -35,14 +35,14 @@ describe('loading express', function () {
 
     it('respond with 422', function testMinNumber(done) {
         supertest(server)
-            .get('/-10000')
+            .get('/-100000')
             .expect(422, done)
             
     });
 
     it('respond with 422', function testMinNumber(done) {
         supertest(server)
-            .get('/10000')
+            .get('/100000')
             .expect(422, done)
             
     });
