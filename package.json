@@ -27,7 +27,7 @@
     "chai": "^4.2.0",
     "express-swagger-generator": "^1.1.17",
     "minimist": "^1.2.3",
-    "mocha": "^7.1.0",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2",
     "ts-node": "^8.6.2",
